@@ -1,0 +1,82 @@
+import streamlit as st
+
+st.set_page_config(page_title="일본 여행 도우미", page_icon="🗾")
+
+st.title("🗾 일본 여행 도우미")
+st.write("일본 여행을 위한 필수 정보를 한눈에 확인하세요!")
+
+# 메뉴 선택
+menu = st.sidebar.selectbox("메뉴 선택", ["여행 준비물", "추천 여행지", "유용한 일본어 표현", "환전 & 교통 정보"])
+
+# 여행 준비물
+if menu == "여행 준비물":
+    st.header("🎒 필수 준비물 체크리스트")
+    st.markdown("""
+    - 여권 (만료일 확인!)
+    - 일본 입국 신고서 (온라인 사전 작성 권장 - Visit Japan Web)
+    - 항공권, 숙소 예약 확인서
+    - 일본 엔화 (현금 일부 지참 추천)
+    - 유심 또는 eSIM / 포켓 Wi-Fi
+    - 여행자 보험
+    - 충전기 / 돼지코 (일본은 A타입 콘센트)
+    - 개인 위생용품 (숙소에 없는 경우도 있음)
+    """)
+
+# 추천 여행지
+elif menu == "추천 여행지":
+    st.header("🏯 추천 여행지")
+
+    st.subheader("1. 도쿄 (Tokyo)")
+    st.write("현대와 전통이 공존하는 일본의 수도. 쇼핑, 맛집, 디즈니랜드까지 모두 갖춘 도시!")
+
+    st.subheader("2. 교토 (Kyoto)")
+    st.write("옛 일본의 정취를 느낄 수 있는 전통 도시. 사찰, 기모노 체험, 아라시야마 대나무숲 등 추천.")
+
+    st.subheader("3. 오사카 (Osaka)")
+    st.write("먹거리 천국! 유니버설 스튜디오, 도톤보리, 오사카성 등 볼거리 가득한 도시.")
+
+    st.subheader("4. 후쿠오카 (Fukuoka)")
+    st.write("규슈 북부의 중심도시. 라멘 거리, 캐널시티, 온천 등 일본 남부의 매력 가득!")
+
+    st.subheader("5. 삿포로 (Sapporo)")
+    st.write("홋카이도의 중심도시. 눈 축제, 맥주 박물관, 홋카이도 미식 여행의 출발점!")
+
+    st.subheader("6. 나고야 (Nagoya)")
+    st.write("도쿄와 오사카 사이의 대도시. 자동차 산업, 역사 유적, 쇼핑 모두 만족!")
+
+    st.subheader("7. 오키나와 (Okinawa)")
+    st.write("에메랄드빛 바다와 따뜻한 기후의 남국 섬. 휴양과 일본 문화가 함께하는 여행지.")
+
+    st.subheader("8. 나라 (Nara)")
+    st.write("사슴과 함께 걷는 고대 수도. 동대사와 고후쿠지 등 일본 불교문화의 진수.")
+
+# 유용한 표현
+elif menu == "유용한 일본어 표현":
+    st.header("🗣 유용한 일본어 표현")
+    st.markdown("""
+    - 안녕하세요: こんにちは (Konnichiwa)  
+    - 감사합니다: ありがとうございます (Arigatou gozaimasu)  
+    - 화장실 어디예요?: トイレはどこですか？ (Toire wa doko desu ka?)  
+    - 이거 얼마예요?: これはいくらですか？ (Kore wa ikura desu ka?)  
+    - 영어 하세요?: 英語を話せますか？ (Eigo o hanasemasu ka?)  
+    - 도와주세요!: 助けてください！ (Tasukete kudasai!)  
+    """)
+
+# 환전 및 교통
+elif menu == "환전 & 교통 정보":
+    st.header("💱 환전 & 교통 팁")
+
+    st.subheader("💴 환전")
+    st.markdown("""
+    - 일본은 아직도 **현금 사용률이 높음**  
+    - 공항보단 **국내 은행/환전소** 이용 추천  
+    - **Suica / PASMO 교통카드** 충전용 현금 필요
+    """)
+
+    st.subheader("🚆 교통")
+    st.markdown("""
+    - **JR 패스**: 광역 이동 시 유리  
+    - **지하철/버스**: 각 도시별 교통패스 활용 가능  
+    - **IC카드 (Suica, ICOCA 등)**: 전국 대부분 지역에서 사용 가능  
+    - **택시**: 비싼 편이므로 단거리 또는 야간 이동용으로 추천
+    """)
